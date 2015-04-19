@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Johnson on 2015/4/16.
@@ -18,6 +19,17 @@ public class InnovationProject implements Serializable {
     private String projectId;
     private Integer projectType;
     private String projectName;
+    private Integer year;
+    private Integer innovationDomain;
+    private Integer number;
+    private String aim;
+    private String responsibleDepartment;
+    private String responsibleDepartmentId;
+    private String accompanyDepartment;
+    private String accompanyDepartmentId;
+    private String progress;
+    private Integer percentage;
+    private Date updateDate;
 
     public Long getId() {
         return id;
