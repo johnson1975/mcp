@@ -7,5 +7,10 @@ public class User {
     private Long id;
     private String userName;
     private String password;
-    private Integer authority;
+    private String nickName;
+    private String headPic;
+    private Integer gender;
+    private Department department;
+    private Long reportTo;
+
 }

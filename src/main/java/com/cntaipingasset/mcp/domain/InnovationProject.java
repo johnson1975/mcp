@@ -16,9 +16,6 @@ public class InnovationProject implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String projectId;
-    private Integer projectType;
-    private String projectName;
     private Integer year;
     private Integer innovationDomain;
     private Integer number;
@@ -30,6 +27,7 @@ public class InnovationProject implements Serializable {
     private String progress;
     private Integer percentage;
     private Date updateDate;
+    private Date createDate = new Date();
 
     public Long getId() {
         return id;
@@ -39,27 +37,99 @@ public class InnovationProject implements Serializable {
         this.id = id;
     }
 
-    public String getProjectId() {
-        return projectId;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setProjectId(String projectId) {
-        this.projectId = projectId;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
-    public Integer getProjectType() {
-        return projectType;
+    public Integer getInnovationDomain() {
+        return innovationDomain;
     }
 
-    public void setProjectType(Integer projectType) {
-        this.projectType = projectType;
+    public void setInnovationDomain(Integer innovationDomain) {
+        this.innovationDomain = innovationDomain;
     }
 
-    public String getProjectName() {
-        return projectName;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
+    public String getAim() {
+        return aim;
+    }
+
+    public void setAim(String aim) {
+        this.aim = aim;
+    }
+
+    public String getResponsibleDepartment() {
+        return responsibleDepartment;
+    }
+
+    public void setResponsibleDepartment(String responsibleDepartment) {
+        this.responsibleDepartment = responsibleDepartment;
+    }
+
+    public String getResponsibleDepartmentId() {
+        return responsibleDepartmentId;
+    }
+
+    public void setResponsibleDepartmentId(String responsibleDepartmentId) {
+        this.responsibleDepartmentId = responsibleDepartmentId;
+    }
+
+    public String getAccompanyDepartment() {
+        return accompanyDepartment;
+    }
+
+    public void setAccompanyDepartment(String accompanyDepartment) {
+        this.accompanyDepartment = accompanyDepartment;
+    }
+
+    public String getAccompanyDepartmentId() {
+        return accompanyDepartmentId;
+    }
+
+    public void setAccompanyDepartmentId(String accompanyDepartmentId) {
+        this.accompanyDepartmentId = accompanyDepartmentId;
+    }
+
+    public String getProgress() {
+        return progress;
+    }
+
+    public void setProgress(String progress) {
+        this.progress = progress;
+    }
+
+    public Integer getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(Integer percentage) {
+        this.percentage = percentage;
+    }
+
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

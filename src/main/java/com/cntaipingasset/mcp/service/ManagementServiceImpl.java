@@ -1,13 +1,7 @@
 package com.cntaipingasset.mcp.service;
 
-import com.cntaipingasset.mcp.domain.AlternativeInvestment;
-import com.cntaipingasset.mcp.domain.AssetManagementProduct;
-import com.cntaipingasset.mcp.domain.ImportantTask;
-import com.cntaipingasset.mcp.domain.InnovationProject;
-import com.cntaipingasset.mcp.repository.AlternativeInvestmentRepository;
-import com.cntaipingasset.mcp.repository.AssetManagementProductRepository;
-import com.cntaipingasset.mcp.repository.ImportantTaskRepository;
-import com.cntaipingasset.mcp.repository.InnovationProjectRepository;
+import com.cntaipingasset.mcp.domain.*;
+import com.cntaipingasset.mcp.repository.*;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -26,6 +20,10 @@ public class ManagementServiceImpl implements ManagementService {
     private ImportantTaskRepository importantTaskRepository;
     @Inject
     private InnovationProjectRepository innovationProjectRepository;
+    @Inject
+    private InnovationProjectHistoryRepository innovationProjectHistoryRepository;
+    @Inject
+    private ImportantTaskHistoryRepository importantTaskHistoryRepository;
 
 
     @Override
@@ -47,4 +45,26 @@ public class ManagementServiceImpl implements ManagementService {
     public List<AssetManagementProduct> getAssetManagementProducts() {
         return assetManagementProductRepository.findAll();
     }
+
+    @Override
+    public InnovationProject addInnovationProject(InnovationProject innovationProject) {
+        return innovationProjectRepository.save(innovationProject);
+    }
+
+    @Override
+    public List<InnovationProjectHistory> getProgressHistories(Long pid) {
+        return innovationProjectHistoryRepository.findByProjectId(pid);
+    }
+
+    @Override
+    public ImportantTask addImportantTask(ImportantTask importantTask) {
+        return importantTaskRepository.save(importantTask);
+    }
+
+    @Override
+    public List<ImportantTaskHistory> getProgressHistoriesOfImportantTask(Long tid) {
+        return importantTaskHistoryRepository.findByTaskId(tid);
+    }
+
+
 }
