@@ -65,6 +65,4 @@ public class ManagementServiceImpl implements ManagementService {
     public List<ImportantTaskHistory> getProgressHistoriesOfImportantTask(Long tid) {
         return importantTaskHistoryRepository.findByTaskId(tid);
     }
-
-
 }

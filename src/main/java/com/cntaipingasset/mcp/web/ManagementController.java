@@ -6,11 +6,14 @@ import com.cntaipingasset.mcp.domain.InnovationProject;
 import com.cntaipingasset.mcp.service.ManagementService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.inject.Inject;
+
 /**
  * Created by Johnson on 2015/4/16.
  */
 @RestController(value = "managementController")
 public class ManagementController {
+    @Inject
     private ManagementService managementService;
 
     @RequestMapping(value = "/alternativeInvestments", method = RequestMethod.GET)
