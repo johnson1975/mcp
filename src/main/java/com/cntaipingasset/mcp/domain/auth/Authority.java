@@ -1,17 +1,19 @@
 package com.cntaipingasset.mcp.domain.auth;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Johnson on 2015/4/16.
  */
 @Entity
-public class Authority {
+public class Authority implements Serializable {
+    private static final long serialVersionUID = 5477023594491142549L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "roleId")
     private Role role;
     private String name;
     private String authority;

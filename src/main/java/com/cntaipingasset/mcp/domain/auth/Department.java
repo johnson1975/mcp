@@ -3,19 +3,21 @@ package com.cntaipingasset.mcp.domain.auth;
 import com.cntaipingasset.mcp.domain.auth.User;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Johnson on 2015/4/21.
  */
 @Entity
-public class Department {
+public class Department implements Serializable {
+    private static final long serialVersionUID = -9008136539069025434L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;
     @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "leader")
     private User leader;
 
     public Long getId() {

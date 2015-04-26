@@ -1,12 +1,14 @@
 package com.cntaipingasset.mcp.domain.auth;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Johnson on 2015/4/16.
  */
 @Entity
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = -6307208559925501248L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,12 +18,12 @@ public class User {
     private String headPic;
     private Integer gender;
     @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "departmentId")
     private Department department;
     private String mobile;
     private String phoneNo;
     @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "roleId")
     private Role role;
     private PositionTypeEnum position;
 
