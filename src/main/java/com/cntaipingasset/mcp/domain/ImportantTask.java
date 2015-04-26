@@ -21,10 +21,17 @@ public class ImportantTask implements Serializable {
     private Integer progress;
     private String content;
     private String responsibleDepartment;
+    private String responsibleDepartmentId;
     private String leader;
+    private String leaderId;
+    private String supervisor;
+    private String supervisorId;
     private String accompanyDepartment;
+    private String accompanyDepartmentId;
     private String accompanyDepartmentLeader;
+    private String accompanyDepartmentLeaderId;
     private String accompanyDepartmentSupervisor;
+    private String accompanyDepartmentSupervisorId;
     private Date estimatedFinishDate;
     private Integer status;
     private Date createDate;
@@ -86,12 +93,44 @@ public class ImportantTask implements Serializable {
         this.responsibleDepartment = responsibleDepartment;
     }
 
+    public String getResponsibleDepartmentId() {
+        return responsibleDepartmentId;
+    }
+
+    public void setResponsibleDepartmentId(String responsibleDepartmentId) {
+        this.responsibleDepartmentId = responsibleDepartmentId;
+    }
+
     public String getLeader() {
         return leader;
     }
 
     public void setLeader(String leader) {
         this.leader = leader;
+    }
+
+    public String getLeaderId() {
+        return leaderId;
+    }
+
+    public void setLeaderId(String leaderId) {
+        this.leaderId = leaderId;
+    }
+
+    public String getSupervisor() {
+        return supervisor;
+    }
+
+    public void setSupervisor(String supervisor) {
+        this.supervisor = supervisor;
+    }
+
+    public String getSupervisorId() {
+        return supervisorId;
+    }
+
+    public void setSupervisorId(String supervisorId) {
+        this.supervisorId = supervisorId;
     }
 
     public String getAccompanyDepartment() {
@@ -102,6 +141,14 @@ public class ImportantTask implements Serializable {
         this.accompanyDepartment = accompanyDepartment;
     }
 
+    public String getAccompanyDepartmentId() {
+        return accompanyDepartmentId;
+    }
+
+    public void setAccompanyDepartmentId(String accompanyDepartmentId) {
+        this.accompanyDepartmentId = accompanyDepartmentId;
+    }
+
     public String getAccompanyDepartmentLeader() {
         return accompanyDepartmentLeader;
     }
@@ -110,12 +157,28 @@ public class ImportantTask implements Serializable {
         this.accompanyDepartmentLeader = accompanyDepartmentLeader;
     }
 
+    public String getAccompanyDepartmentLeaderId() {
+        return accompanyDepartmentLeaderId;
+    }
+
+    public void setAccompanyDepartmentLeaderId(String accompanyDepartmentLeaderId) {
+        this.accompanyDepartmentLeaderId = accompanyDepartmentLeaderId;
+    }
+
     public String getAccompanyDepartmentSupervisor() {
         return accompanyDepartmentSupervisor;
     }
 
     public void setAccompanyDepartmentSupervisor(String accompanyDepartmentSupervisor) {
         this.accompanyDepartmentSupervisor = accompanyDepartmentSupervisor;
+    }
+
+    public String getAccompanyDepartmentSupervisorId() {
+        return accompanyDepartmentSupervisorId;
+    }
+
+    public void setAccompanyDepartmentSupervisorId(String accompanyDepartmentSupervisorId) {
+        this.accompanyDepartmentSupervisorId = accompanyDepartmentSupervisorId;
     }
 
     public Date getEstimatedFinishDate() {
