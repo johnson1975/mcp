@@ -2,10 +2,7 @@ package com.cntaipingasset.mcp.domain.auth;
 
 import com.cntaipingasset.mcp.domain.auth.User;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Johnson on 2015/4/21.
@@ -17,6 +14,8 @@ public class Department {
     private Long id;
     private String name;
     private String description;
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "id")
     private User leader;
 
     public Long getId() {
