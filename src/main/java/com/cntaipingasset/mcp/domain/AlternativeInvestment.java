@@ -21,4 +21,6 @@ public class AlternativeInvestment implements Serializable {
     private String estimatedAmount; // 拟投资规模
     private String currentAmount; // 已投资规模
     private String investmentManager;
+    private String progress;
+    private String status;
 }
