@@ -1,5 +1,7 @@
 package com.cntaipingasset.mcp.domain.auth;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -17,8 +19,9 @@ public class User implements Serializable {
     private String nickName;
     private String headPic;
     private Integer gender;
-    @OneToOne(cascade = {CascadeType.ALL})
+    @ManyToOne
     @JoinColumn(name = "departmentId")
+    @JsonIgnore
     private Department department;
     private String mobile;
     private String phoneNo;

@@ -4,6 +4,8 @@ import com.cntaipingasset.mcp.domain.auth.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Johnson on 2015/4/21.
@@ -19,7 +21,8 @@ public class Department implements Serializable {
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "leader")
     private User leader;
-
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "department")
+    private List<User> members = new ArrayList<>();
     public Long getId() {
         return id;
     }
@@ -50,5 +53,13 @@ public class Department implements Serializable {
 
     public void setLeader(User leader) {
         this.leader = leader;
+    }
+
+    public List<User> getMembers() {
+        return members;
+    }
+
+    public void setMembers(List<User> members) {
+        this.members = members;
     }
 }
