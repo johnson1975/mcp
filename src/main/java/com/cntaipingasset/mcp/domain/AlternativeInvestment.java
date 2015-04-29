@@ -14,5 +14,13 @@ public class AlternativeInvestment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private Integer number;
+    private String name;
+    private Integer type;
+    private Integer span; // 期限
+    private String estimatedAmount; // 拟投资规模
+    private String currentAmount; // 已投资规模
+    private String investmentManager;
+    private String progress;
+    private String status;
 }

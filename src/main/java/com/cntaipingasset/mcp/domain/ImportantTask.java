@@ -18,7 +18,7 @@ public class ImportantTask implements Serializable {
     private Integer number;
     private Integer type;
     private Integer category;
-    private Integer progress;
+    private String progress;
     private String content;
     private String responsibleDepartment;
     private String responsibleDepartmentId;
@@ -69,11 +69,11 @@ public class ImportantTask implements Serializable {
         this.category = category;
     }
 
-    public Integer getProgress() {
+    public String getProgress() {
         return progress;
     }
 
-    public void setProgress(Integer progress) {
+    public void setProgress(String progress) {
         this.progress = progress;
     }
 
