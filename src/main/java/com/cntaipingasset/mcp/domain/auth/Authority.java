@@ -1,5 +1,7 @@
 package com.cntaipingasset.mcp.domain.auth;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,6 +16,7 @@ public class Authority implements Serializable {
     private Long id;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "roleId")
+    @JsonIgnore
     private Role role;
     private String name;
     private String authority;

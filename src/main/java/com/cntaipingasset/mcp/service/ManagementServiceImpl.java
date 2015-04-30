@@ -65,4 +65,9 @@ public class ManagementServiceImpl implements ManagementService {
     public List<ImportantTaskHistory> getProgressHistoriesOfImportantTask(Long tid) {
         return importantTaskHistoryRepository.findByTaskId(tid);
     }
+
+    @Override
+    public AlternativeInvestment getAlternativeInvestment(Long aid) {
+        return alternativeInvestmentRepository.findOne(aid);
+    }
 }

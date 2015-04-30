@@ -22,6 +22,12 @@ public class ManagementController {
         return Result.successResult(managementService.getAlternativeInvestments());
     }
 
+    @RequestMapping(value = "/alternativeInvestments/{aid}", method = RequestMethod.GET)
+    @ResponseBody
+    public Result getAlternativeInvestment(@PathVariable Long aid) {
+        return Result.successResult(managementService.getAlternativeInvestment(aid));
+    }
+
     @RequestMapping(value = "/innovationProjects", method = RequestMethod.GET)
     @ResponseBody
     public Result getInnovationProjects() {

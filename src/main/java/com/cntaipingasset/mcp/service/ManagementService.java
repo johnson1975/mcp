@@ -24,4 +24,6 @@ public interface ManagementService {
 
     public List<ImportantTaskHistory> getProgressHistoriesOfImportantTask(Long tid);
 
+    public AlternativeInvestment getAlternativeInvestment(Long aid);
+
 }
