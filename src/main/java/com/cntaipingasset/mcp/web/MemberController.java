@@ -64,6 +64,4 @@ public class MemberController {
     public Result getUsersByPosition(@MatrixVariable(value = "u") List<Long> uidList, @PathVariable Long departmentId) {
         return Result.successResult(memberService.updateDepartmentForUsers(departmentId, uidList));
     }
-
-
 }
